@@ -1,12 +1,12 @@
 {
-  "name": "omit-deep",
+  "name": "@wertarbyte/omit-deep",
   "description": "Recursively omit the specified key or keys from an object.",
-  "version": "0.3.0",
-  "homepage": "https://github.com/jonschlinkert/omit-deep",
+  "version": "0.4.0",
+  "homepage": "https://github.com/TeamWertarbyte/omit-deep",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
-  "repository": "jonschlinkert/omit-deep",
+  "repository": "TeamWertarbyte/omit-deep",
   "bugs": {
-    "url": "https://github.com/jonschlinkert/omit-deep/issues"
+    "url": "https://github.com/TeamWertarbyte/omit-deep/issues"
   },
   "license": "MIT",
   "files": [
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.11",
-    "mocha": "^3.2.0"
+    "mocha": "^6.2.0"
   },
   "keywords": [
     "deep",

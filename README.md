@@ -1,19 +1,21 @@
-# omit-deep [![NPM version](https://img.shields.io/npm/v/omit-deep.svg?style=flat)](https://www.npmjs.com/package/omit-deep) [![NPM monthly downloads](https://img.shields.io/npm/dm/omit-deep.svg?style=flat)](https://npmjs.org/package/omit-deep)  [![NPM total downloads](https://img.shields.io/npm/dt/omit-deep.svg?style=flat)](https://npmjs.org/package/omit-deep) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/omit-deep.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/omit-deep)
+# @wertarbyte/omit-deep [![NPM version](https://img.shields.io/npm/v/@wertarbyte/omit-deep.svg?style=flat)](https://www.npmjs.com/package/@wertarbyte/omit-deep) [![NPM monthly downloads](https://img.shields.io/npm/dm/@wertarbyte/omit-deep.svg?style=flat)](https://npmjs.org/package/@wertarbyte/omit-deep)  [![NPM total downloads](https://img.shields.io/npm/dt/@wertarbyte/omit-deep.svg?style=flat)](https://npmjs.org/package/@wertarbyte/omit-deep) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/@wertarbyte/omit-deep.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/@wertarbyte/omit-deep)
 
 > Recursively omit the specified key or keys from an object.
+
+*Note:* This is a fork of the [original omit-deep package](https://github.com/jonschlinkert/omit-deep) with [this fix](https://github.com/jonschlinkert/omit-deep/pulls) applied, i.e. it won't cast `undefined` to `{}`.
 
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
 
 ```sh
-$ npm install --save omit-deep
+$ npm install --save @wertarbyte/omit-deep
 ```
 
 ## Usage
 
 ```js
-var omitDeep = require('omit-deep');
+var omitDeep = require('@wertarbyte/omit-deep');
 
 var obj = {a: 'a', b: 'b', c: {b: 'b', d: {b: 'b', f: 'f'}}};
 console.log(omitDeep(obj, ['b']));
@@ -45,6 +47,7 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 | 18 | [jonschlinkert](https://github.com/jonschlinkert) |
 | 2 | [splodingsocks](https://github.com/splodingsocks) |
 | 1 | [rikukissa](https://github.com/rikukissa) |
+| 1 | [rasenplanscher](https://github.com/rasenplanscher) |
 
 ### Building docs
 

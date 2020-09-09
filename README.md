@@ -2,7 +2,7 @@
 
 > Recursively omit the specified key or keys from an object.
 
-*Note:* This is a fork of the [original omit-deep package](https://github.com/jonschlinkert/omit-deep) with [this fix](https://github.com/jonschlinkert/omit-deep/pulls) applied, i.e. it won't cast `undefined` to `{}`.
+*Note:* This is a fork of the [original omit-deep package](https://github.com/jonschlinkert/omit-deep) with [this fix](https://github.com/jonschlinkert/omit-deep/pulls/8) applied, i.e. it won't cast `undefined` to `{}`.
 
 ## Install
 

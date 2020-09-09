@@ -1,7 +1,7 @@
 {
   "name": "@wertarbyte/omit-deep",
   "description": "Recursively omit the specified key or keys from an object.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "homepage": "https://github.com/TeamWertarbyte/omit-deep",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "TeamWertarbyte/omit-deep",

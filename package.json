@@ -21,6 +21,7 @@
     "test": "mocha"
   },
   "dependencies": {
+    "has-value": "^2.0.2",
     "is-plain-object": "^2.0.1",
     "unset-value": "^0.1.1"
   },

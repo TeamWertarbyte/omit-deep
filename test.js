@@ -81,4 +81,35 @@ describe('.omit()', function() {
       'numbers': ['1', '2']
     });
   });
+
+  it('should be immutable if inplace is false', function() {
+    var old = {a: 'a', b: 'b', c: {b: 'b', d: 'd', e: {b: 'b', f: 'f', g: {b: 'b', c: 'c'}}}};
+    var obj = omitDeep(old, ['b', 'd', 'f'], false);
+    assert.notStrictEqual(old, obj); // new reference
+
+    old = Object.freeze(old);
+    obj = omitDeep(old, ['b', 'd', 'f'], false);
+    assert.deepEqual(obj, {a: 'a', c: {e: {g: {c: 'c'}}}}); // immutable, so works with frozen object
+  });
+
+  it('should only return a new reference if things were changed if inplace is false', function() {
+    var old = Object.freeze({a: 'a', b: 'b', c: {b: 'b', d: 'd', e: [{b: 'b'}, {f: 'f', g: {b: 'b', c: 'c'}}]}});
+    var obj = omitDeep(old, ['b', 'd', 'f'], false);
+    assert.notStrictEqual(old, obj); // changed
+    assert.strictEqual(old, omitDeep(old, ['x', 'y', 'z'], false)); // not changed
+  });
+
+  it('should automatically turn off inplace mode if the object is frozen', function() {
+    var old = Object.freeze({a: 'a', b: 'b', c: {b: 'b', d: 'd', e: [{b: 'b'}, {f: 'f', g: {b: 'b', c: 'c'}}]}});
+    var obj;
+    assert.doesNotThrow(() => {
+      obj = omitDeep(old, ['b', 'd', 'f']);
+    });
+    assert.notStrictEqual(old, obj);
+
+    // explicitly enable inplace mode, should throw
+    assert.throws(() => {
+      omitDeep(old, ['b', 'd', 'f'], true);
+    }, TypeError);
+  })
 });

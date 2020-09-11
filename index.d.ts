@@ -16,7 +16,8 @@ type DeepOmitArray<T extends any[], K> = {
 
 declare function omitDeep<T, K extends string>(
   value: T,
-  keys: K | K[]
+  keys: K | K[],
+  inplace?: boolean
 ): DeepOmit<T, K>;
 
 export = omitDeep;
